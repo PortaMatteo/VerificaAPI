@@ -1,8 +1,14 @@
-<h2>{{item.result.properties.model}}</h2>
-<p><b>Classe:</b> {{item.result.properties.starship_class}} </p>
-<p><b>Casa produttrice:</b> {{item.result.properties.manufacturer}} </p>
-<p><b>Costo</b> {{item.result.properties.cost_in_credits}} </p>
-<p><b>Velocità massima</b> {{item.result.properties.max_atmosphering_speed}} </p>
-<p><b>Lunghezza</b> {{item.result.properties.length}} metri </p>
-<p><a href (click)="back()">Back</a></p>
-{{item|json}}
+<div class="container">
+    <h2>{{item.result.properties.model}}</h2>
+
+
+    <ul class="list-group">
+        <li class="list-group-item"><p><b>Classe:</b> {{item.result.properties.starship_class}} </p></li>
+        <li class="list-group-item"><p><b>Casa produttrice:</b> {{item.result.properties.manufacturer}} </p></li>
+        <li class="list-group-item"><p><b>Costo</b> {{item.result.properties.cost_in_credits}} </p></li>
+        <li class="list-group-item"><p><b>Velocità massima</b> {{item.result.properties.max_atmosphering_speed}} </p></li>
+        <li class="list-group-item"><p><b>Lunghezza</b> {{item.result.properties.length}} metri </p></li>
+      </ul>
+      <p><a href (click)="back()">Back</a></p>
+</div>
+
