@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, ParamMap} from '@angular/router';
 import { Observable } from 'rxjs';
 import { GuerreStellariService } from '../guerre-stellari.service';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-item',
@@ -15,6 +16,7 @@ export class ItemComponent {
   constructor(
     private route: ActivatedRoute,
     private service: GuerreStellariService,
+    private location: Location
     ){}
     ngOnInit(): void {
       this.route.paramMap.subscribe((params: ParamMap) => {
@@ -24,5 +26,9 @@ export class ItemComponent {
           this.GuerreStellariObs.subscribe((data) => {this.item = data; console.log(this.item)})
         }
       });
+    }
+    back() : void
+    {
+      this.location.back();
     }
 }
