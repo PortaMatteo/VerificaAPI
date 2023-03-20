@@ -11,7 +11,12 @@ export class GuerreStellariService {
   searchItems(query: string) {
     const url = `https://www.swapi.tech/api/${query}`
     return this.http.get(url)
-    
+  
+  }
 
+  getItem(id: string){
+    const url = `https://www.swapi.tech/api/starships/${id}`;
+  
+    return this.http.get(url);
   }
 }
